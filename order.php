@@ -1,4 +1,8 @@
-<?php$pageTitle = 'Оформить заказ';?>
+<?php
+$pageTitle = 'Оформить заказ';
+$headerTitle = '<span>техно</span>Store';
+$logImg = './img/icons/padlock.svg';
+?>
 
 <?php include('./templates/_head.php'); ?>
 
