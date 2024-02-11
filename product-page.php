@@ -1,4 +1,5 @@
 <?php
+require_once('config.php');
 $headerTitle = '<span>техно</span>Store';
 $logImg = './img/icons/padlock.svg';
 ?>
@@ -19,6 +20,16 @@ $logImg = './img/icons/padlock.svg';
 
 				<!-- Center Part -->
 				<div class="col-md-9">
+                    <?php
+                    $sql =  "SELECT * FROM `products` WHERE id = 1";
+                    $result = $db->query($sql);
+                    $products = $result->fetch(PDO::FETCH_ASSOC);
+
+                    print_r($product);
+                    
+                    ?>
+
+
 					<div class="product-title">Apple iMac 27" Retina 5K Core i5 3.8 ГГц, 8 ГБ, 2 ТБ Fusion Drive, Radeon Pro 580 8 ГБ</div>
 
 					<div class="row">

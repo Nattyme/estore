@@ -1,4 +1,5 @@
 <?php
+require_once('config.php');
 $pageTitle = 'Добавить товар';
 $headerTitle = 'Админ панель';
 $logImg = '../img/icons/logout.svg';

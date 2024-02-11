@@ -1,4 +1,5 @@
 <?php
+require_once('config.php');
 $pageTitle = 'Вход в админ панель';
 $logImg = 'img/icons/padlock.svg';
 ?>
