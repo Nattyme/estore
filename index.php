@@ -1,4 +1,5 @@
 <?php
+require_once('config.php');
 $pageTitle = 'Главная страница';
 $headerTitle = '<span>техно</span>Store';
 $logImg = './img/icons/padlock.svg';
@@ -23,9 +24,24 @@ $logImg = './img/icons/padlock.svg';
 					<div class="row">
 
                     <?php
-                    for ($i = 0; $i < 5; $i++) {
-                        include("./templates/_product-item.php"); 
-                    }
+                    
+                        $sql = "SELECT * FROM `products`";
+                        $result = $db->query($sql);
+                        $products = $result->fetchAll(PDO::FETCH_ASSOC);
+
+                        // print_r($products);
+
+                        foreach( $products as $product) {
+                    ?>
+
+                    ---Вывод продукта через шаблон---
+
+                    <?php
+                        }
+
+                    // for ($i = 0; $i < 5; $i++) {
+                    //     include("./templates/_product-item.php"); 
+                    // }
                     ?>
 
 					</div>
