@@ -1,10 +1,21 @@
 <div class="col-sm-6 col-md-6 col-lg-4">
     <article class="card mb-4">
         <div class="card-top">
-            <div class="card-top__sale">Sale</div>
+
+        <?php 
+            if( $product['sale'] ) { ?>
+             <div class="card-top__sale">Sale</div>
+            <?php } ?>
+
+        <?php
+            if( $product ['new'] ) { ?>
+            <div class="card-top__new">New</div>
+            <?php } ?>
+
             <div class="card-top__cat">
                 <?php echo $product['category'] ?>
             </div>
+        
         </div>
         <div class="product-img">
             <img src="img/products/<?php echo $product['img'] ?>">
