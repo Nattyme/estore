@@ -21,7 +21,9 @@ $logImg = './img/icons/padlock.svg';
 				<!-- Center Part -->
 				<div class="col-md-9">
                     <?php
-                    $sql =  "SELECT * FROM `products` WHERE id = 1";
+                    $currentProductId = intval($_GET['productId']);
+
+                    $sql =  "SELECT * FROM `products` WHERE id = '$currentProductId'";
                     $result = $db->query($sql);
                     $product = $result->fetch(PDO::FETCH_ASSOC);
                     ?>

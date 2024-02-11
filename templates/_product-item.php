@@ -21,7 +21,8 @@
             <img src="img/products/<?php echo $product['img'] ?>">
         </div>
         <div class="card-body">
-            <h4 class="item-title"><a href="product-page.php">
+            <h4 class="item-title">
+                <a href="product-page.php?productId=<?php echo $product['id']?>">
                 <?php echo $product['title']?>
             </a></h4>
             <div class="card-btn">
