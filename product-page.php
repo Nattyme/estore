@@ -10,7 +10,7 @@ $logImg = './img/icons/padlock.svg';
 	<div class="white-plate">
 		<div class="container-fluid">
 
-        <?php include('./templates/_header.php'); ?>
+            <?php include('./templates/_header.php'); ?>
 
 			<div class="line-between"></div>
 			<!-- content block -->
@@ -23,27 +23,24 @@ $logImg = './img/icons/padlock.svg';
                     <?php
                     $sql =  "SELECT * FROM `products` WHERE id = 1";
                     $result = $db->query($sql);
-                    $products = $result->fetch(PDO::FETCH_ASSOC);
-
-                    print_r($product);
-                    
+                    $product = $result->fetch(PDO::FETCH_ASSOC);
                     ?>
 
-
-					<div class="product-title">Apple iMac 27" Retina 5K Core i5 3.8 ГГц, 8 ГБ, 2 ТБ Fusion Drive, Radeon Pro 580 8 ГБ</div>
+					<div class="product-title">
+                        <?php echo $product['title'] ?>
+                    </div>
 
 					<div class="row">
 						<div class="col-6">
-							<img src="img/products/imac.jpg" alt="">
+							<img src="img/products/<?php echo $product['img'] ?>" alt="">
 						</div>
 						<div class="col-6">
-							<div class="product-price">164 990 руб</div>
+							<div class="product-price">
+                                <?php echo $product['price'] ?>
+                            </div>
 							<a href="order.php" class="product-btn-order">Сделать заказ</a>
 							<div class="product-desc">
-								<p>Настольный компьютер, который погружает вас в контент. Буквально. Эта идея лежит в основе современного iMac — и сегодня она актуальна как никогда.</p>
-								<p>Совершенно новые процессоры, инновационные графические технологии, передовые накопители и разъёмы с впечатляющей пропускной способностью — всё это новый iMac. А его дисплей Retina способен оживить любую картинку, ведь по яркости и качеству цветопередачи ему нет равных среди iMac.</p>
-								<p>Работать на iMac теперь ещё интереснее и увлекательнее.</p>
-
+								<?php echo $product['description'] ?>
 							</div>
 
 						</div>
