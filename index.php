@@ -32,16 +32,8 @@ $logImg = './img/icons/padlock.svg';
                         // print_r($products);
 
                         foreach( $products as $product) {
-                    ?>
-
-                    ---Вывод продукта через шаблон---
-
-                    <?php
+                            include("./templates/_product-item.php"); 
                         }
-
-                    // for ($i = 0; $i < 5; $i++) {
-                    //     include("./templates/_product-item.php"); 
-                    // }
                     ?>
 
 					</div>
